@@ -10,6 +10,8 @@ import UIKit
 
 class HLTrafficLightsIndicatorView: UIView {
 
+    fileprivate var durationRate: Double    = 0.7
+    fileprivate var frameRate: CGFloat      = 1
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,15 +49,15 @@ class HLTrafficLightsIndicatorView: UIView {
         
         let runwayPath = UIBezierPath()
         
-        runwayPath.move(to: CGPoint(x: 125, y: 40))
-        runwayPath.addArc(withCenter: CGPoint(x: 90, y: 140), radius: 35, startAngle: 0, endAngle: CGFloat.pi, clockwise: true)
-        runwayPath.move(to: CGPoint(x: 55, y: 140))
-        runwayPath.addArc(withCenter: CGPoint(x: 90, y: 40), radius: 35, startAngle:  CGFloat.pi, endAngle:0, clockwise: true)
+        runwayPath.move(to: CGPoint(x: 125*frameRate, y: 40*frameRate))
+        runwayPath.addArc(withCenter: CGPoint(x: 90*frameRate, y: 140*frameRate), radius: 35*frameRate, startAngle: 0, endAngle: CGFloat.pi, clockwise: true)
+        runwayPath.move(to: CGPoint(x: 55*frameRate, y: 140*frameRate))
+        runwayPath.addArc(withCenter: CGPoint(x: 90*frameRate, y: 40*frameRate), radius: 35*frameRate, startAngle:  CGFloat.pi, endAngle:0, clockwise: true)
 
        
         runwayLayer.path = runwayPath.cgPath
         
-        runwayLayer.lineWidth     = 10.0
+        runwayLayer.lineWidth     = 10.0*CGFloat(frameRate)
         runwayLayer.fillColor     = UIColor.clear.cgColor
         runwayLayer.strokeColor   = UIColor(red: 6/255, green: 122/255, blue: 240/255, alpha: 1).cgColor
         runwayLayer.lineCap       = kCALineCapRound;
@@ -63,23 +65,23 @@ class HLTrafficLightsIndicatorView: UIView {
         
         self.layer.addSublayer(runwayLayer)
  
-        redCircleLayer      = drawCircle(withCenter: CGPoint(x: 90, y: 45), strokeColor: UIColor.red, radius: 15, lineWidth: 10)
-        yellowCircleLayer   = drawCircle(withCenter: CGPoint(x: 90, y: 90), strokeColor: UIColor.orange, radius: 15, lineWidth: 10)
-        greenCircleLayer    = drawCircle(withCenter: CGPoint(x: 90, y: 135), strokeColor: UIColor.green, radius: 15, lineWidth: 10)
+        redCircleLayer      = drawCircle(withCenter: CGPoint(x: 90*frameRate, y: 45*frameRate), strokeColor: UIColor.red, radius: 15*frameRate, lineWidth: 10*frameRate)
+        yellowCircleLayer   = drawCircle(withCenter: CGPoint(x: 90*frameRate, y: 90*frameRate), strokeColor: UIColor.orange, radius: 15*frameRate, lineWidth: 10*frameRate)
+        greenCircleLayer    = drawCircle(withCenter: CGPoint(x: 90*frameRate, y: 135*frameRate), strokeColor: UIColor.green, radius: 15*frameRate, lineWidth: 10*frameRate)
         
         self.layer.addSublayer(redCircleLayer)
         self.layer.addSublayer(yellowCircleLayer)
         self.layer.addSublayer(greenCircleLayer)
         
         
-         redPoint0 = drawPoint(withCenter:  CGPoint(x: 150, y: 50), strokeColor: UIColor.red, diameter: 10)
-         redPoint1 = drawPoint(withCenter:  CGPoint(x: 40, y: 90), strokeColor: UIColor.red, diameter: 10)
+         redPoint0 = drawPoint(withCenter:  CGPoint(x: 150*frameRate, y: 50*frameRate), strokeColor: UIColor.red, diameter: 15*frameRate)
+         redPoint1 = drawPoint(withCenter:  CGPoint(x: 40*frameRate, y: 90*frameRate), strokeColor: UIColor.red, diameter: 15*frameRate)
         
-         yellowPoint0 = drawPoint(withCenter:  CGPoint(x: 30, y: 20), strokeColor: UIColor.orange, diameter: 10)
-         yellowPoint1 = drawPoint(withCenter:  CGPoint(x: 150, y: 140), strokeColor: UIColor.orange, diameter: 10)
+         yellowPoint0 = drawPoint(withCenter:  CGPoint(x: 30*frameRate, y: 20*frameRate), strokeColor: UIColor.orange, diameter: 15*frameRate)
+         yellowPoint1 = drawPoint(withCenter:  CGPoint(x: 150*frameRate, y: 140*frameRate), strokeColor: UIColor.orange, diameter: 15*frameRate)
         
-         greenPoint0 = drawPoint(withCenter:  CGPoint(x: 15, y: 70), strokeColor: UIColor.green, diameter: 10)
-         greenPoint1 = drawPoint(withCenter:  CGPoint(x: 160, y: 90), strokeColor: UIColor.green, diameter: 10)
+         greenPoint0 = drawPoint(withCenter:  CGPoint(x: 15*frameRate, y: 70*frameRate), strokeColor: UIColor.green, diameter: 15)
+         greenPoint1 = drawPoint(withCenter:  CGPoint(x: 160*frameRate, y: 90*frameRate), strokeColor: UIColor.green, diameter: 15)
         
         
         self.layer.addSublayer(redPoint0)
@@ -123,50 +125,101 @@ class HLTrafficLightsIndicatorView: UIView {
     
     fileprivate func animateLayers() {
         
-        let shapAnim = CABasicAnimation(keyPath: "strokeEnd")
-        shapAnim.fromValue = 0.0
-        shapAnim.toValue = 1.0
-        shapAnim.duration = 1
+        addRunwayLayerAnimation()
         
-        runwayLayer.add(shapAnim, forKey: "anim")
+        addCircleLayerAnimation(redCircleLayer, fillColor: UIColor.red, delay: 0.2*durationRate)
+        addCircleLayerAnimation(yellowCircleLayer, fillColor: UIColor.orange, delay: 0.4*durationRate)
+        addCircleLayerAnimation(greenCircleLayer, fillColor: UIColor.green, delay: 0.6*durationRate)
+
+        addPointLayerAnimation(redPoint0, delay: 0.1*durationRate)
+        addPointLayerAnimation(redPoint1, delay: 0.4*durationRate)
         
-        let shapAnimStart = CABasicAnimation(keyPath: "strokeStart")
-        shapAnimStart.fromValue = 0.0
-        shapAnimStart.toValue = 1.0
-        shapAnimStart.duration = 1
-        shapAnimStart.beginTime = CACurrentMediaTime() + 1
+        addPointLayerAnimation(yellowPoint0, delay: 0.7*durationRate)
+        addPointLayerAnimation(yellowPoint1, delay: 1*durationRate)
         
-        runwayLayer.add(shapAnimStart, forKey: "anim1")
-        
-        addCircleLayerAnimation(redCircleLayer, fillColor: UIColor.red, withDuration: 1, delay: 0.1)
-        addCircleLayerAnimation(yellowCircleLayer, fillColor: UIColor.orange, withDuration: 1, delay: 0.4)
-        addCircleLayerAnimation(greenCircleLayer, fillColor: UIColor.green,withDuration: 1, delay: 0.6)
+        addPointLayerAnimation(greenPoint0, delay: 1.3*durationRate)
+        addPointLayerAnimation(greenPoint1, delay: 1.6*durationRate)
         
     }
     
-    func addCircleLayerAnimation(_ toLayer: CALayer, fillColor: UIColor, withDuration duration: CFTimeInterval, delay: CFTimeInterval) {
+    fileprivate func addRunwayLayerAnimation() {
+       
+        let strokeEndAnim = CABasicAnimation(keyPath: "strokeEnd")
+        strokeEndAnim.fromValue = 0.0
+        strokeEndAnim.toValue = 1.0
+        strokeEndAnim.duration = 0.7*durationRate
+        strokeEndAnim.fillMode = kCAFillModeForwards
         
+        let strokeStartAnim = CABasicAnimation(keyPath: "strokeStart")
+        strokeStartAnim.fromValue = 0.0
+        strokeStartAnim.toValue = 1.0
+        strokeStartAnim.duration = 0.7*durationRate
+        strokeStartAnim.beginTime = 1.3*durationRate
+        
+        let runwayLayerAnimaiton = CAAnimationGroup()
+        runwayLayerAnimaiton.animations = [strokeEndAnim, strokeStartAnim]
+        runwayLayerAnimaiton.duration = 2*durationRate
+        runwayLayerAnimaiton.beginTime = CACurrentMediaTime()
+        runwayLayerAnimaiton.repeatCount = .infinity
+        runwayLayerAnimaiton.fillMode = kCAFillModeBoth
+        runwayLayerAnimaiton.isRemovedOnCompletion = false
+        
+        runwayLayer.add(runwayLayerAnimaiton, forKey: "strokeStartAnim")
+    }
+    
+    fileprivate func addCircleLayerAnimation(_ toLayer: CALayer, fillColor: UIColor, delay: CFTimeInterval) {
         
         let strokeEndAnim          = CABasicAnimation(keyPath: "strokeEnd")
-        strokeEndAnim.fromValue    = 0.0
+        strokeEndAnim.fromValue    = -0.1
         strokeEndAnim.toValue      = 1.0
-        strokeEndAnim.duration     = 0.4
-        strokeEndAnim.beginTime    = delay
+        strokeEndAnim.duration     = 0.5*durationRate
+        strokeEndAnim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         
-        let fillColorAnim            = CABasicAnimation(keyPath: "fillColor")
-        fillColorAnim.fromValue      = fillColor.cgColor
-        fillColorAnim.toValue        = fillColor.cgColor
-        fillColorAnim.duration       = 0.20
-        fillColorAnim.beginTime      = 0.5 + delay
+        let fillColorAnim           = CABasicAnimation(keyPath: "fillColor")
+        fillColorAnim.fromValue     = fillColor.cgColor
+        fillColorAnim.toValue       = fillColor.cgColor
+        fillColorAnim.duration      = 0.2*durationRate
+        fillColorAnim.beginTime     = 0.5*durationRate
+        fillColorAnim.fillMode      = kCAFillModeForwards
+        fillColorAnim.isRemovedOnCompletion = false
         
-        let redLayerAnim            = CAAnimationGroup()
-        redLayerAnim.animations     = [strokeEndAnim, fillColorAnim]
-        redLayerAnim.duration       = duration
-        redLayerAnim.beginTime      = CACurrentMediaTime()
-        redLayerAnim.autoreverses   = true
-        redLayerAnim.fillMode       = kCAFillModeForwards
-        toLayer.add(redLayerAnim, forKey: "layerAnim")
+        let topLayerAnim            = CAAnimationGroup()
+        topLayerAnim.animations     = [strokeEndAnim, fillColorAnim]
+        topLayerAnim.duration       = 0.7*durationRate
+        topLayerAnim.beginTime      = delay
+        topLayerAnim.autoreverses   = true
+        topLayerAnim.fillMode       = kCAFillModeBoth
+        topLayerAnim.isRemovedOnCompletion = false
+        
+        let topLayerAnimContainer           = CAAnimationGroup()
+        topLayerAnimContainer.animations    = [topLayerAnim]
+        topLayerAnimContainer.duration      = 2*durationRate
+        topLayerAnimContainer.beginTime     = CACurrentMediaTime()
+        topLayerAnimContainer.repeatCount   = .infinity
+        
+        toLayer.add(topLayerAnimContainer, forKey: "layerAnim")
     }
     
+    fileprivate func addPointLayerAnimation(_ toLayer: CALayer, delay: CFTimeInterval) {
+        
+        let pointAnim           = CABasicAnimation(keyPath: "transform.scale")
+        
+        pointAnim.fromValue     = 0
+        pointAnim.toValue       = 1
+        pointAnim.duration      = 0.2*durationRate
+        pointAnim.autoreverses  = true
+        pointAnim.beginTime     = delay
+        pointAnim.fillMode      = kCAFillModeBoth
+        pointAnim.isRemovedOnCompletion = false
+        
+        let pointLayerAnimContainer           = CAAnimationGroup()
+        pointLayerAnimContainer.animations    = [pointAnim]
+        pointLayerAnimContainer.duration      = 2*durationRate
+        pointLayerAnimContainer.beginTime     = CACurrentMediaTime()
+        pointLayerAnimContainer.repeatCount   = .infinity
+
+        toLayer.add(pointLayerAnimContainer, forKey: "layerAnim")
+
+    }
     
 }
