@@ -150,6 +150,12 @@ class HLTrafficLightsIndicatorView: UIView {
         strokeEndAnim.duration = 0.7*durationRate
         strokeEndAnim.fillMode = kCAFillModeForwards
         
+        let jumpAnim = CAKeyframeAnimation(keyPath: "transform.translation.x")
+//        jumpAnim.values = 
+//        runwayLayer.transform
+        jumpAnim.duration = 0.2*durationRate
+        jumpAnim.fillMode = kCAFillModeForwards
+        
         let strokeStartAnim = CABasicAnimation(keyPath: "strokeStart")
         strokeStartAnim.fromValue = 0.0
         strokeStartAnim.toValue = 1.0
@@ -157,7 +163,7 @@ class HLTrafficLightsIndicatorView: UIView {
         strokeStartAnim.beginTime = 1.3*durationRate
         
         let runwayLayerAnimaiton = CAAnimationGroup()
-        runwayLayerAnimaiton.animations = [strokeEndAnim, strokeStartAnim]
+        runwayLayerAnimaiton.animations = [strokeEndAnim, jumpAnim, strokeStartAnim]
         runwayLayerAnimaiton.duration = 2*durationRate
         runwayLayerAnimaiton.beginTime = CACurrentMediaTime()
         runwayLayerAnimaiton.repeatCount = .infinity
@@ -221,5 +227,28 @@ class HLTrafficLightsIndicatorView: UIView {
         toLayer.add(pointLayerAnimContainer, forKey: "layerAnim")
 
     }
+
+    fileprivate func animationValues(fromValue: CGFloat, toValue: CGFloat, usingSpringWithDamping damping: CGFloat, initialSpringVelocity velocity: CGFloat,  duration: Double) -> [CGFloat] {
+        
+        
+        let numOfPoints = duration*60
+        
+        var values = [CGFloat]()
+        
+        
+        let dValue = toValue - fromValue
+        
+        for index in 0 ... Int(numOfPoints) {
+            
+            let x = CGFloat(index)/CGFloat(numOfPoints)
+            let value = toValue - dValue * CGFloat( pow(M_E, -Double(damping*x))*Double(cos(velocity*x)))
+            
+            values.append(value)
+            
+        }
+        return values;
+        
+    }
+    
     
 }
