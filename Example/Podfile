@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HLTrafficLightsIndicatorView_Example' do
+  pod 'HLTrafficLightsIndicatorView', :path => '../'
+
+  target 'HLTrafficLightsIndicatorView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
