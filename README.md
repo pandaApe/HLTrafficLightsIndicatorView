@@ -51,7 +51,8 @@ open var bottomRingColor     = UIColor(red: 18/255, green: 222/255, blue: 125/25
 open var duration: Double = 1.2 
 ```    
 
-
+## TODO
+The runway layer need enable spring animation.
 
 ## Author
 
