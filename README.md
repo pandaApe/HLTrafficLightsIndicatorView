@@ -56,11 +56,11 @@ open var duration: Double = 1.2
 ```    
 
 ## TODO
-The runway layer need enable spring animation.
+~~The runway layer need enable spring animation.~~
 
 ## Author
 
-pandaape, whailong2010@gmail.com
+pandaApe, whailong2010@gmail.com
 
 ## License
 
