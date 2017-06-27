@@ -15,6 +15,10 @@
 ### Timeline
 <img src="Img/timeline.png" alt="Animated gif">
 
+### Vibration
+<img src="Img/Spring.png" alt="Animated gif">
+
+[vibration wikipedia](https://zh.wikipedia.org/zh-cn/%E6%8C%AF%E5%8A%A8#.E9.98.BB.E5.B0.BC.E6.8C.AF.E5.8A.A8)
 
 ## Requirements
 - Swift 3.0
