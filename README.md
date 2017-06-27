@@ -18,7 +18,7 @@
 ### Vibration for runway layer
 <img src="Img/Spring.png" alt="Animated gif">
 
-In iOS9 Apple finally made the ```CASpringAnimation``` class public, we can simplly create a spring animation effecting CALayer. But our indicator view must be compatible with iOS8+. To archive the subtle effects for runway layer, we should dig out little physics knowledge, that is Vibration. 
+In iOS9 Apple finally made the ```CASpringAnimation``` class public, we can simplly create an attractive spring animation effecting CALayer. But our indicator view must be compatible with iOS8+. To archive the subtle effects for runway layer, we should dig out little physics knowledge, that is Vibration. 
 
 Pls check reference bellow:
 
