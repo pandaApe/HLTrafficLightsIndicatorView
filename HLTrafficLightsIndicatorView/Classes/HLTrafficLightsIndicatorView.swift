@@ -188,13 +188,18 @@ open class HLTrafficLightsIndicatorView: UIView {
         strokeEndAnim.toValue           = 1.0
         strokeEndAnim.duration          = 0.7*durationRate
         strokeEndAnim.fillMode          = kCAFillModeForwards
+
+        let jumpAnimX = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        jumpAnimX.values = self.animationValues(fromValue:7*frameRate, toValue: 0, usingSpringWithDamping: 15, initialSpringVelocity: 30,  duration: 3*durationRate)
+        jumpAnimX.beginTime = 0
+        jumpAnimX.duration = 3*durationRate
+        jumpAnimX.fillMode = kCAFillModeForwards
         
-        //TODO: translation.x
-        let jumpAnim = CAKeyframeAnimation(keyPath: "transform.translation.x")
-        //        jumpAnim.values =
-        //        runwayLayer.transform
-        jumpAnim.duration = 0.2*durationRate
-        jumpAnim.fillMode = kCAFillModeForwards
+        let jumpAnimY = CAKeyframeAnimation(keyPath: "transform.translation.y")
+        jumpAnimY.values = self.animationValues(fromValue:15*frameRate, toValue: 0, usingSpringWithDamping: 15, initialSpringVelocity: 30,  duration: 3*durationRate)
+        jumpAnimY.beginTime = 0
+        jumpAnimY.duration = 3*durationRate
+        jumpAnimY.fillMode = kCAFillModeForwards
         
         let strokeStartAnim                 = CABasicAnimation(keyPath: "strokeStart")
         strokeStartAnim.fromValue           = 0.0
@@ -203,7 +208,7 @@ open class HLTrafficLightsIndicatorView: UIView {
         strokeStartAnim.beginTime           = 1.3*durationRate
         
         let runwayLayerAnimaiton            = CAAnimationGroup()
-        runwayLayerAnimaiton.animations     = [strokeEndAnim, jumpAnim, strokeStartAnim]
+        runwayLayerAnimaiton.animations     = [strokeEndAnim, jumpAnimX, jumpAnimY, strokeStartAnim]
         runwayLayerAnimaiton.duration       = 2*durationRate
         runwayLayerAnimaiton.beginTime      = CACurrentMediaTime()
         runwayLayerAnimaiton.repeatCount    = .infinity
@@ -280,14 +285,13 @@ open class HLTrafficLightsIndicatorView: UIView {
         for index in 0 ... Int(numOfPoints) {
             
             let x = CGFloat(index)/CGFloat(numOfPoints)
+            
             let value = toValue - dValue * CGFloat( pow(M_E, -Double(damping*x))*Double(cos(velocity*x)))
             
             values.append(value)
             
         }
-        return values;
         
+        return values;
     }
-    
-    
 }
