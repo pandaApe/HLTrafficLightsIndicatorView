@@ -13,14 +13,35 @@ open class HLTrafficLightsIndicatorView: UIView {
     fileprivate var durationRate: Double    = 0.6
     fileprivate var frameRate: CGFloat      = 1
     
-    open var topRingColor        = UIColor.red
-    open var centerRingColor     = UIColor(red: 255/255, green: 192/255, blue: 1/255, alpha: 1)
-    open var bottomRingColor     = UIColor(red: 18/255, green: 222/255, blue: 125/255, alpha: 1)
+    open var topRingColor        = UIColor.red {
+        
+        didSet{
+            self.layoutSubviews()
+        }
+    }
+    open var centerRingColor     = UIColor(red: 255/255, green: 192/255, blue: 1/255, alpha: 1) {
+        
+        didSet{
+            self.layoutSubviews()
+        }
+    }
+    
+    open var bottomRingColor     = UIColor(red: 18/255, green: 222/255, blue: 125/255, alpha: 1) {
+        
+        didSet{
+            self.layoutSubviews()
+        }
+    }
     
     open var duration: Double = 1.2 {
         
         willSet{
             durationRate = newValue/2
+            
+        }
+        
+        didSet{
+            self.layoutSubviews()
         }
     }
     
@@ -41,7 +62,7 @@ open class HLTrafficLightsIndicatorView: UIView {
         super.init(coder: aDecoder)
     }
 
-    open func refresh() {
+    fileprivate func refresh() {
         
         runwayLayer.removeFromSuperlayer()
         
@@ -60,6 +81,13 @@ open class HLTrafficLightsIndicatorView: UIView {
         
         animateLayers()
     }
+    
+    
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        refresh()
+    }
+    
     
     fileprivate let runwayLayer         = CAShapeLayer()
     
@@ -190,13 +218,13 @@ open class HLTrafficLightsIndicatorView: UIView {
         strokeEndAnim.fillMode          = kCAFillModeForwards
 
         let jumpAnimX = CAKeyframeAnimation(keyPath: "transform.translation.x")
-        jumpAnimX.values = self.animationValues(fromValue:7*frameRate, toValue: 0, usingSpringWithDamping: 15, initialSpringVelocity: 30,  duration: 3*durationRate)
+        jumpAnimX.values = self.animationValues(fromValue:10*frameRate, toValue: 0, usingSpringWithDamping: 15, initialSpringVelocity: 55,  duration: 3*durationRate)
         jumpAnimX.beginTime = 0
         jumpAnimX.duration = 3*durationRate
         jumpAnimX.fillMode = kCAFillModeForwards
         
         let jumpAnimY = CAKeyframeAnimation(keyPath: "transform.translation.y")
-        jumpAnimY.values = self.animationValues(fromValue:15*frameRate, toValue: 0, usingSpringWithDamping: 15, initialSpringVelocity: 30,  duration: 3*durationRate)
+        jumpAnimY.values = self.animationValues(fromValue:15*frameRate, toValue: 0, usingSpringWithDamping: 15, initialSpringVelocity: 55,  duration: 3*durationRate)
         jumpAnimY.beginTime = 0
         jumpAnimY.duration = 3*durationRate
         jumpAnimY.fillMode = kCAFillModeForwards

@@ -15,6 +15,8 @@ class ViewController: UIViewController {
 
         let view = HLTrafficLightsIndicatorView(frame: CGRect(x: 100, y: 100, width: 200, height: 200))
         
+        //        view.duration = 2
+        
         self.view.addSubview(view)
         
     }
