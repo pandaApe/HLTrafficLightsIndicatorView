@@ -15,10 +15,15 @@
 ### Timeline
 <img src="Img/timeline.png" alt="Animated gif">
 
-### Vibration
+### Vibration for runway layer
 <img src="Img/Spring.png" alt="Animated gif">
 
-[vibration wikipedia](https://zh.wikipedia.org/zh-cn/%E6%8C%AF%E5%8A%A8#.E9.98.BB.E5.B0.BC.E6.8C.AF.E5.8A.A8)
+In iOS9 Apple finally made the ```CASpringAnimation``` class public, we can simplly create a spring animation effecting CALayer. But our indicator view must be compatible with iOS8+. To archive the subtle effects for runway layer, we should dig out little physics knowledge, that is Vibration. 
+
+Pls check reference bellow:
+
+- [vibration wikipedia](https://zh.wikipedia.org/zh-cn/%E6%8C%AF%E5%8A%A8#.E9.98.BB.E5.B0.BC.E6.8C.AF.E5.8A.A8)
+- [vibration in HLTrafficLightsIndicatorView](https://github.com/pandaApe/HLTrafficLightsIndicatorView/blob/master/HLTrafficLightsIndicatorView/Classes/HLTrafficLightsIndicatorView.swift#L305)
 
 ## Requirements
 - Swift 3.0
@@ -55,7 +60,7 @@ open var bottomRingColor     = UIColor(red: 18/255, green: 222/255, blue: 125/25
 open var duration: Double = 1.2 
 ```    
 
-## TODO
+## ~~TODO~~
 ~~The runway layer need enable spring animation.~~
 
 ## Author
