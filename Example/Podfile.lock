@@ -1,5 +1,5 @@
 PODS:
-  - HLTrafficLightsIndicatorView (0.1.0)
+  - HLTrafficLightsIndicatorView (0.1.1)
 
 DEPENDENCIES:
   - HLTrafficLightsIndicatorView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HLTrafficLightsIndicatorView: '08bf11954c3c06f02b471a67c1c3e228b24cca5c'
+  HLTrafficLightsIndicatorView: 87b00ff2e988762c1809e7580bc0c4850f4cadcc
 
 PODFILE CHECKSUM: a2238125dbaebcbc8ebcbedfb45592536928e9ea
 
