@@ -77,12 +77,12 @@ open class HLTrafficLightsIndicatorView: UIView {
         centerRingLayer.removeFromSuperlayer()
         bottomRingLayer.removeFromSuperlayer()
         
-        redPoint0.removeFromSuperlayer()
-        redPoint1.removeFromSuperlayer()
-        yellowPoint0.removeFromSuperlayer()
-        yellowPoint1.removeFromSuperlayer()
-        greenPoint0.removeFromSuperlayer()
-        greenPoint1.removeFromSuperlayer()
+        point1.removeFromSuperlayer()
+        point2.removeFromSuperlayer()
+        point3.removeFromSuperlayer()
+        point4.removeFromSuperlayer()
+        point5.removeFromSuperlayer()
+        point6.removeFromSuperlayer()
         
         drawLayers()
         
@@ -98,18 +98,18 @@ open class HLTrafficLightsIndicatorView: UIView {
     
     fileprivate let runwayLayer         = CAShapeLayer()
     
-    fileprivate var topRingLayer        = CAShapeLayer()
-    fileprivate var centerRingLayer     = CAShapeLayer()
-    fileprivate var bottomRingLayer     = CAShapeLayer()
+    fileprivate let topRingLayer        = CAShapeLayer()
+    fileprivate let centerRingLayer     = CAShapeLayer()
+    fileprivate let bottomRingLayer     = CAShapeLayer()
     
-    fileprivate var redPoint0           = CALayer()
-    fileprivate var redPoint1           = CALayer()
+    fileprivate let point1           = CALayer()
+    fileprivate let point2           = CALayer()
     
-    fileprivate var yellowPoint0        = CALayer()
-    fileprivate var yellowPoint1        = CALayer()
+    fileprivate let point3        = CALayer()
+    fileprivate let point4        = CALayer()
     
-    fileprivate var greenPoint0         = CALayer()
-    fileprivate var greenPoint1         = CALayer()
+    fileprivate let point5         = CALayer()
+    fileprivate let point6         = CALayer()
     
     
     fileprivate func drawLayers() {
@@ -151,22 +151,22 @@ open class HLTrafficLightsIndicatorView: UIView {
         self.layer.addSublayer(bottomRingLayer)
         
         
-        drawPoint(redPoint0, withCenter:  CGPoint(x: 150*frameRate, y: 50*frameRate), strokeColor: topRingColor, diameter: 15*frameRate)
-        drawPoint(redPoint1, withCenter:  CGPoint(x: 40*frameRate, y: 90*frameRate), strokeColor: topRingColor, diameter: 15*frameRate)
+        drawPoint(point1, withCenter:  CGPoint(x: 150*frameRate, y: 50*frameRate), strokeColor: topRingColor, diameter: 15*frameRate)
+        drawPoint(point2, withCenter:  CGPoint(x: 40*frameRate, y: 90*frameRate), strokeColor: topRingColor, diameter: 15*frameRate)
         
-        drawPoint(yellowPoint0, withCenter:  CGPoint(x: 30*frameRate, y: 20*frameRate), strokeColor: centerRingColor, diameter: 15*frameRate)
-        drawPoint(yellowPoint1, withCenter:  CGPoint(x: 150*frameRate, y: 140*frameRate), strokeColor: centerRingColor, diameter: 15*frameRate)
+        drawPoint(point3, withCenter:  CGPoint(x: 30*frameRate, y: 20*frameRate), strokeColor: centerRingColor, diameter: 15*frameRate)
+        drawPoint(point4, withCenter:  CGPoint(x: 150*frameRate, y: 140*frameRate), strokeColor: centerRingColor, diameter: 15*frameRate)
         
-        drawPoint(greenPoint0, withCenter:  CGPoint(x: 15*frameRate, y: 70*frameRate), strokeColor: bottomRingColor, diameter: 15*frameRate)
-        drawPoint(greenPoint1, withCenter:  CGPoint(x: 160*frameRate, y: 90*frameRate), strokeColor: bottomRingColor, diameter: 15*frameRate)
+        drawPoint(point5, withCenter:  CGPoint(x: 15*frameRate, y: 70*frameRate), strokeColor: bottomRingColor, diameter: 15*frameRate)
+        drawPoint(point6, withCenter:  CGPoint(x: 160*frameRate, y: 90*frameRate), strokeColor: bottomRingColor, diameter: 15*frameRate)
         
         
-        self.layer.addSublayer(redPoint0)
-        self.layer.addSublayer(redPoint1)
-        self.layer.addSublayer(yellowPoint0)
-        self.layer.addSublayer(yellowPoint1)
-        self.layer.addSublayer(greenPoint0)
-        self.layer.addSublayer(greenPoint1)
+        self.layer.addSublayer(point1)
+        self.layer.addSublayer(point2)
+        self.layer.addSublayer(point3)
+        self.layer.addSublayer(point4)
+        self.layer.addSublayer(point5)
+        self.layer.addSublayer(point6)
         
     }
     
@@ -185,8 +185,7 @@ open class HLTrafficLightsIndicatorView: UIView {
     fileprivate func drawRing(_ shapeLayer: CAShapeLayer, withCenter center:CGPoint, strokeColor: UIColor, radius: CGFloat, lineWidth: CGFloat) -> CAShapeLayer {
         
         let path                = UIBezierPath()
-        path.addArc(withCenter: center, radius: radius, startAngle: -CGFloat.pi/2, endAngle: CGFloat.pi/2, clockwise: true)
-        path.addArc(withCenter: center, radius: radius, startAngle: CGFloat.pi/2, endAngle: -CGFloat.pi/2, clockwise: true)
+        path.addArc(withCenter: center, radius: radius, startAngle: -CGFloat.pi/2, endAngle: CGFloat.pi/2*3, clockwise: true)
         
         shapeLayer.path         = path.cgPath
         shapeLayer.lineWidth    = lineWidth
@@ -206,14 +205,14 @@ open class HLTrafficLightsIndicatorView: UIView {
         addRingLayerAnimation(centerRingLayer, fillColor: centerRingColor, delay: 0.4*durationRate)
         addRingLayerAnimation(bottomRingLayer, fillColor: bottomRingColor, delay: 0.6*durationRate)
         
-        addPointLayerAnimation(redPoint0, delay: 0.1*durationRate)
-        addPointLayerAnimation(redPoint1, delay: 0.4*durationRate)
+        addPointLayerAnimation(point1, delay: 0.1*durationRate)
+        addPointLayerAnimation(point2, delay: 0.4*durationRate)
         
-        addPointLayerAnimation(yellowPoint0, delay: 0.7*durationRate)
-        addPointLayerAnimation(yellowPoint1, delay: 1*durationRate)
+        addPointLayerAnimation(point3, delay: 0.7*durationRate)
+        addPointLayerAnimation(point4, delay: 1*durationRate)
         
-        addPointLayerAnimation(greenPoint0, delay: 1.3*durationRate)
-        addPointLayerAnimation(greenPoint1, delay: 1.6*durationRate)
+        addPointLayerAnimation(point5, delay: 1.3*durationRate)
+        addPointLayerAnimation(point6, delay: 1.6*durationRate)
         
     }
     
