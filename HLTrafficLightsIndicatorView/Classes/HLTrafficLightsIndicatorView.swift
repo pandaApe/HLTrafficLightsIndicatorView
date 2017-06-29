@@ -33,6 +33,13 @@ open class HLTrafficLightsIndicatorView: UIView {
         }
     }
     
+    open var runwayColor        = UIColor(red: 6/255, green: 122/255, blue: 240/255, alpha: 1) {
+        
+        didSet{
+            self.layoutSubviews()
+        }
+    }
+    
     open var duration: Double = 1.2 {
         
         willSet{
@@ -55,13 +62,13 @@ open class HLTrafficLightsIndicatorView: UIView {
     override public init(frame: CGRect) {
         super.init(frame: frame)
         
-         refresh()
+        refresh()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
+    
     fileprivate func refresh() {
         
         runwayLayer.removeFromSuperlayer()
@@ -115,7 +122,6 @@ open class HLTrafficLightsIndicatorView: UIView {
         frameRate = self.bounds.width/180
         
         // draw Runway layer
-        
         let runwayPath = UIBezierPath()
         
         runwayPath.move(to: CGPoint(x: 125*frameRate, y: 40*frameRate))
@@ -123,34 +129,36 @@ open class HLTrafficLightsIndicatorView: UIView {
         runwayPath.move(to: CGPoint(x: 55*frameRate, y: 140*frameRate))
         runwayPath.addArc(withCenter: CGPoint(x: 90*frameRate, y: 40*frameRate), radius: 35*frameRate, startAngle:  CGFloat.pi, endAngle:0, clockwise: true)
         
-        
+    
         runwayLayer.path        = runwayPath.cgPath
         
         runwayLayer.lineWidth   = 10.0*CGFloat(frameRate)
         runwayLayer.fillColor   = UIColor.clear.cgColor
-        runwayLayer.strokeColor = UIColor(red: 6/255, green: 122/255, blue: 240/255, alpha: 1).cgColor
+        runwayLayer.strokeColor = runwayColor.cgColor
         runwayLayer.lineCap     = kCALineCapRound;
         runwayLayer.lineJoin    = kCALineCapRound;
         
         self.layer.addSublayer(runwayLayer)
         
-        topRingLayer        = drawRing(withCenter: CGPoint(x: 90*frameRate, y: 45*frameRate), strokeColor: topRingColor, radius: 15*frameRate, lineWidth: 10*frameRate)
-        centerRingLayer     = drawRing(withCenter: CGPoint(x: 90*frameRate, y: 90*frameRate), strokeColor: centerRingColor, radius: 15*frameRate, lineWidth: 10*frameRate)
-        bottomRingLayer     = drawRing(withCenter: CGPoint(x: 90*frameRate, y: 135*frameRate), strokeColor: bottomRingColor, radius: 15*frameRate, lineWidth: 10*frameRate)
+        drawRing(topRingLayer, withCenter: CGPoint(x: 90*frameRate, y: 45*frameRate), strokeColor: topRingColor, radius: 15*frameRate, lineWidth: 10*frameRate)
+        
+        drawRing(centerRingLayer, withCenter: CGPoint(x: 90*frameRate, y: 90*frameRate), strokeColor: centerRingColor, radius: 15*frameRate, lineWidth: 10*frameRate)
+        
+        drawRing(bottomRingLayer, withCenter: CGPoint(x: 90*frameRate, y: 135*frameRate), strokeColor: bottomRingColor, radius: 15*frameRate, lineWidth: 10*frameRate)
         
         self.layer.addSublayer(topRingLayer)
         self.layer.addSublayer(centerRingLayer)
         self.layer.addSublayer(bottomRingLayer)
         
         
-        redPoint0 = drawPoint(withCenter:  CGPoint(x: 150*frameRate, y: 50*frameRate), strokeColor: topRingColor, diameter: 15*frameRate)
-        redPoint1 = drawPoint(withCenter:  CGPoint(x: 40*frameRate, y: 90*frameRate), strokeColor: topRingColor, diameter: 15*frameRate)
+        drawPoint(redPoint0, withCenter:  CGPoint(x: 150*frameRate, y: 50*frameRate), strokeColor: topRingColor, diameter: 15*frameRate)
+        drawPoint(redPoint1, withCenter:  CGPoint(x: 40*frameRate, y: 90*frameRate), strokeColor: topRingColor, diameter: 15*frameRate)
         
-        yellowPoint0 = drawPoint(withCenter:  CGPoint(x: 30*frameRate, y: 20*frameRate), strokeColor: centerRingColor, diameter: 15*frameRate)
-        yellowPoint1 = drawPoint(withCenter:  CGPoint(x: 150*frameRate, y: 140*frameRate), strokeColor: centerRingColor, diameter: 15*frameRate)
+        drawPoint(yellowPoint0, withCenter:  CGPoint(x: 30*frameRate, y: 20*frameRate), strokeColor: centerRingColor, diameter: 15*frameRate)
+        drawPoint(yellowPoint1, withCenter:  CGPoint(x: 150*frameRate, y: 140*frameRate), strokeColor: centerRingColor, diameter: 15*frameRate)
         
-        greenPoint0 = drawPoint(withCenter:  CGPoint(x: 15*frameRate, y: 70*frameRate), strokeColor: bottomRingColor, diameter: 15*frameRate)
-        greenPoint1 = drawPoint(withCenter:  CGPoint(x: 160*frameRate, y: 90*frameRate), strokeColor: bottomRingColor, diameter: 15*frameRate)
+        drawPoint(greenPoint0, withCenter:  CGPoint(x: 15*frameRate, y: 70*frameRate), strokeColor: bottomRingColor, diameter: 15*frameRate)
+        drawPoint(greenPoint1, withCenter:  CGPoint(x: 160*frameRate, y: 90*frameRate), strokeColor: bottomRingColor, diameter: 15*frameRate)
         
         
         self.layer.addSublayer(redPoint0)
@@ -162,9 +170,9 @@ open class HLTrafficLightsIndicatorView: UIView {
         
     }
     
-    fileprivate func drawPoint(withCenter center: CGPoint, strokeColor: UIColor, diameter: CGFloat) -> CALayer{
+    @discardableResult
+    fileprivate func drawPoint(_ pointLayer: CALayer, withCenter center: CGPoint, strokeColor: UIColor, diameter: CGFloat) -> CALayer{
         
-        let pointLayer              = CALayer()
         pointLayer.position         = center
         pointLayer.bounds           = CGRect(x: 0, y: 0, width: diameter, height: diameter)
         pointLayer.cornerRadius     = diameter/2
@@ -173,13 +181,13 @@ open class HLTrafficLightsIndicatorView: UIView {
         return pointLayer
     }
     
-    fileprivate func drawRing(withCenter center:CGPoint, strokeColor: UIColor, radius: CGFloat, lineWidth: CGFloat) -> CAShapeLayer {
+    @discardableResult
+    fileprivate func drawRing(_ shapeLayer: CAShapeLayer, withCenter center:CGPoint, strokeColor: UIColor, radius: CGFloat, lineWidth: CGFloat) -> CAShapeLayer {
         
         let path                = UIBezierPath()
         path.addArc(withCenter: center, radius: radius, startAngle: -CGFloat.pi/2, endAngle: CGFloat.pi/2, clockwise: true)
         path.addArc(withCenter: center, radius: radius, startAngle: CGFloat.pi/2, endAngle: -CGFloat.pi/2, clockwise: true)
         
-        let shapeLayer          = CAShapeLayer()
         shapeLayer.path         = path.cgPath
         shapeLayer.lineWidth    = lineWidth
         shapeLayer.fillColor    = UIColor.clear.cgColor
@@ -216,7 +224,7 @@ open class HLTrafficLightsIndicatorView: UIView {
         strokeEndAnim.toValue           = 1.0
         strokeEndAnim.duration          = 0.7*durationRate
         strokeEndAnim.fillMode          = kCAFillModeForwards
-
+        
         let jumpAnimX = CAKeyframeAnimation(keyPath: "transform.translation.x")
         jumpAnimX.values = self.animationValues(fromValue:10*frameRate, toValue: 0, usingSpringWithDamping: 15, initialSpringVelocity: 55,  duration: 3*durationRate)
         jumpAnimX.beginTime = 0
@@ -276,7 +284,7 @@ open class HLTrafficLightsIndicatorView: UIView {
         topLayerAnimContainer.beginTime     = CACurrentMediaTime()
         topLayerAnimContainer.repeatCount   = .infinity
         topLayerAnimContainer.isRemovedOnCompletion     = false
-
+        
         toLayer.add(topLayerAnimContainer, forKey: "layerAnim")
     }
     
