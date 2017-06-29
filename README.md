@@ -18,7 +18,7 @@
 ### Vibration for runway layer
 <img src="Img/Spring.png" alt="Animated gif">
 
-In iOS9 Apple finally made the ```CASpringAnimation``` class public, we can simplly create an attractive spring animation effecting CALayer. But our indicator view must be compatible with iOS8+. To archive the subtle effects for runway layer, we should dig out little physics knowledge, that is Vibration. 
+In iOS9 Apple finally made the ```CASpringAnimation``` class public, we can simplly create an attractive spring animation effecting CALayer. But our indicator view must be compatible with iOS8+. To archive the subtle effects for runway layer, we should dig out little physics knowledge, that is the Vibration. 
 
 Pls check reference bellow:
 
@@ -56,6 +56,7 @@ self.view.addSubview(view)
 open var topRingColor        = UIColor.red
 open var centerRingColor     = UIColor(red: 255/255, green: 192/255, blue: 1/255, alpha: 1)
 open var bottomRingColor     = UIColor(red: 18/255, green: 222/255, blue: 125/255, alpha: 1)
+open var runwayColor         = UIColor(red: 6/255, green: 122/255, blue: 240/255, alpha: 1)
 
 open var duration: Double = 1.2 
 ```    
