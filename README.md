@@ -26,9 +26,9 @@ Pls check reference bellow:
 - [vibration in HLTrafficLightsIndicatorView](https://github.com/pandaApe/HLTrafficLightsIndicatorView/blob/master/HLTrafficLightsIndicatorView/Classes/HLTrafficLightsIndicatorView.swift#L305)
 
 ## Requirements
-- Swift 3.0
+- Swift 3.0+
 - iOS 8.0+
-- Xcode 8.0
+- Xcode 8.0+
 
 ## Installation
 
