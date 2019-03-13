@@ -1,0 +1,6 @@
+framework module Pods_HLTrafficLightsIndicatorView_Example {
+  umbrella header "Pods-HLTrafficLightsIndicatorView_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
