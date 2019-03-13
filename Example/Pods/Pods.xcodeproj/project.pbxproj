@@ -1,0 +1,781 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		079C17D4CB252A13DDAA97871A05ABC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		3E04F7843503F1553A5C6A35826FF6D4 /* Pods-HLTrafficLightsIndicatorView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5633C0628FB59369264D00C187932D6E /* Pods-HLTrafficLightsIndicatorView_Tests-dummy.m */; };
+		A1B831D4491FB37F99DB98E3FE3EF0C9 /* Pods-HLTrafficLightsIndicatorView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE9743820B547D00C4A853BD36E9787C /* Pods-HLTrafficLightsIndicatorView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B67757BEC97BB2DD8A82380F3ACAB24A /* HLTrafficLightsIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C80C58421A557CF024CEEAA824C686 /* HLTrafficLightsIndicatorView.swift */; };
+		BC91D0255760D08F1C967AC3DD301185 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		C2EEAB0144873F1C2F29F3D6F836FE9B /* HLTrafficLightsIndicatorView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C309AF0BC4D458E98A19D615DD9570D /* HLTrafficLightsIndicatorView-dummy.m */; };
+		E0CE33FB0B9EE073C1013EE504F992CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		E74A8D281604E6C003FD873507EEDFB7 /* Pods-HLTrafficLightsIndicatorView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19483E3B826256AD10A3F82184877537 /* Pods-HLTrafficLightsIndicatorView_Example-dummy.m */; };
+		EA38A6D27660E9608511CF1965591648 /* Pods-HLTrafficLightsIndicatorView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D7D70E8F0FE161D572223CE8BE0F25 /* Pods-HLTrafficLightsIndicatorView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6A6DF06FC458ED145522498D6679E2B /* HLTrafficLightsIndicatorView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC75A535BBF3C0CE0157ABB444B218C6 /* HLTrafficLightsIndicatorView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F9E3050A1A7721D222B0EE4D654FDD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51FC2A50CA538F50DAAB71FD45C84915;
+			remoteInfo = "Pods-HLTrafficLightsIndicatorView_Example";
+		};
+		D6C5E24B8F86AE1AD2CC5405734128FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2240AFA5D1745C3F2B8A7AA0488792E0;
+			remoteInfo = HLTrafficLightsIndicatorView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03D7D70E8F0FE161D572223CE8BE0F25 /* Pods-HLTrafficLightsIndicatorView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HLTrafficLightsIndicatorView_Tests-umbrella.h"; sourceTree = "<group>"; };
+		0C3401111EC61548B5BE61602D0A4F54 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19483E3B826256AD10A3F82184877537 /* Pods-HLTrafficLightsIndicatorView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HLTrafficLightsIndicatorView_Example-dummy.m"; sourceTree = "<group>"; };
+		1E2C838EE026A316568F621BA52AC0AC /* Pods-HLTrafficLightsIndicatorView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HLTrafficLightsIndicatorView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		24AF1B888DBE2BC65466EB0EE952C383 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		25F0E4DB7FF6C52170690EC2EFD14D34 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27847548C2855965CEE3B476869B9500 /* HLTrafficLightsIndicatorView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HLTrafficLightsIndicatorView-prefix.pch"; sourceTree = "<group>"; };
+		2E86E93A141BD2A22880A0E6A2A9AC9B /* Pods-HLTrafficLightsIndicatorView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HLTrafficLightsIndicatorView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		32EF8682A279CA1FFEF1CD35A3D8BDB8 /* HLTrafficLightsIndicatorView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = HLTrafficLightsIndicatorView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		53C80C58421A557CF024CEEAA824C686 /* HLTrafficLightsIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HLTrafficLightsIndicatorView.swift; path = HLTrafficLightsIndicatorView/Classes/HLTrafficLightsIndicatorView.swift; sourceTree = "<group>"; };
+		55D9E5EA6FBC99B2EDD59AF213D12624 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		5633C0628FB59369264D00C187932D6E /* Pods-HLTrafficLightsIndicatorView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HLTrafficLightsIndicatorView_Tests-dummy.m"; sourceTree = "<group>"; };
+		58294B85DDA3431B48B42E6172DCA2CF /* HLTrafficLightsIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HLTrafficLightsIndicatorView.framework; path = HLTrafficLightsIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		69B4A3CFAD75465A1822B4FFA1EE5CFF /* Pods-HLTrafficLightsIndicatorView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HLTrafficLightsIndicatorView_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		7C309AF0BC4D458E98A19D615DD9570D /* HLTrafficLightsIndicatorView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HLTrafficLightsIndicatorView-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A62B7A0886859755677164CD6CF5986C /* Pods-HLTrafficLightsIndicatorView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HLTrafficLightsIndicatorView_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		B55C1137F4358A2E12B8EAE065E93378 /* Pods-HLTrafficLightsIndicatorView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HLTrafficLightsIndicatorView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B962DB8FBDC19B8789695D191757F70E /* Pods-HLTrafficLightsIndicatorView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HLTrafficLightsIndicatorView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BC75A535BBF3C0CE0157ABB444B218C6 /* HLTrafficLightsIndicatorView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HLTrafficLightsIndicatorView-umbrella.h"; sourceTree = "<group>"; };
+		CBAD53C6755573D230AAF04BF1E6BD28 /* Pods_HLTrafficLightsIndicatorView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HLTrafficLightsIndicatorView_Tests.framework; path = "Pods-HLTrafficLightsIndicatorView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD09BD3427C5F2AB895D3BD1CBDCB0D0 /* Pods-HLTrafficLightsIndicatorView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HLTrafficLightsIndicatorView_Tests.modulemap"; sourceTree = "<group>"; };
+		D2CCB7D40011EA2892ABE7453CFF8FA7 /* Pods-HLTrafficLightsIndicatorView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HLTrafficLightsIndicatorView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D58BC45E7C46D73B5B272B3F05DBECEB /* Pods-HLTrafficLightsIndicatorView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HLTrafficLightsIndicatorView_Example-frameworks.sh"; sourceTree = "<group>"; };
+		D99B81BA21F9AB6365E75B82BB38B44E /* Pods-HLTrafficLightsIndicatorView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HLTrafficLightsIndicatorView_Example-resources.sh"; sourceTree = "<group>"; };
+		DB21B066B4B29E8DC7FA5FE440B6B212 /* Pods-HLTrafficLightsIndicatorView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HLTrafficLightsIndicatorView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		DF87FA122DAA751732CB403110ECC2C5 /* Pods_HLTrafficLightsIndicatorView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HLTrafficLightsIndicatorView_Example.framework; path = "Pods-HLTrafficLightsIndicatorView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6D097D13600535DF145046F8D8C4303 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E97B529B8E94F1B00C6ACF19A4E41548 /* Pods-HLTrafficLightsIndicatorView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HLTrafficLightsIndicatorView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EB8BCEB6401F7AE3CB7CA51DB88B9683 /* HLTrafficLightsIndicatorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HLTrafficLightsIndicatorView.modulemap; sourceTree = "<group>"; };
+		EE6509F683664DECD546BEBC7CB067AE /* HLTrafficLightsIndicatorView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HLTrafficLightsIndicatorView.xcconfig; sourceTree = "<group>"; };
+		EF74F035B332A1DD973AFE09312DF2A0 /* Pods-HLTrafficLightsIndicatorView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HLTrafficLightsIndicatorView_Tests-resources.sh"; sourceTree = "<group>"; };
+		F5A5BC4B3581E291C6D05F2CE6D8CC34 /* Pods-HLTrafficLightsIndicatorView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HLTrafficLightsIndicatorView_Example.modulemap"; sourceTree = "<group>"; };
+		FE9743820B547D00C4A853BD36E9787C /* Pods-HLTrafficLightsIndicatorView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HLTrafficLightsIndicatorView_Example-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B0D104ED80376633C0B3F3FF81FF91B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				079C17D4CB252A13DDAA97871A05ABC3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E411F91D806B9F73CC9BAD049D0B7EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC91D0255760D08F1C967AC3DD301185 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCABDEA8423885689B87727D7EF19AC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0CE33FB0B9EE073C1013EE504F992CF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		057DE5B2606E54D881EEEA13014315D4 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				32EF8682A279CA1FFEF1CD35A3D8BDB8 /* HLTrafficLightsIndicatorView.podspec */,
+				24AF1B888DBE2BC65466EB0EE952C383 /* LICENSE */,
+				55D9E5EA6FBC99B2EDD59AF213D12624 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		0A0715DA68ADBF42F6C978C296EB24DE /* HLTrafficLightsIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				53C80C58421A557CF024CEEAA824C686 /* HLTrafficLightsIndicatorView.swift */,
+				057DE5B2606E54D881EEEA13014315D4 /* Pod */,
+				CDF203933AE828388B6F30A274B5CE6A /* Support Files */,
+			);
+			name = HLTrafficLightsIndicatorView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		1186193E67D0D6F7EB27C3C909EBC9F5 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A0715DA68ADBF42F6C978C296EB24DE /* HLTrafficLightsIndicatorView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		160BEFE378CABE1F8916398C603BEECB /* Pods-HLTrafficLightsIndicatorView_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E6D097D13600535DF145046F8D8C4303 /* Info.plist */,
+				CD09BD3427C5F2AB895D3BD1CBDCB0D0 /* Pods-HLTrafficLightsIndicatorView_Tests.modulemap */,
+				E97B529B8E94F1B00C6ACF19A4E41548 /* Pods-HLTrafficLightsIndicatorView_Tests-acknowledgements.markdown */,
+				1E2C838EE026A316568F621BA52AC0AC /* Pods-HLTrafficLightsIndicatorView_Tests-acknowledgements.plist */,
+				5633C0628FB59369264D00C187932D6E /* Pods-HLTrafficLightsIndicatorView_Tests-dummy.m */,
+				A62B7A0886859755677164CD6CF5986C /* Pods-HLTrafficLightsIndicatorView_Tests-frameworks.sh */,
+				EF74F035B332A1DD973AFE09312DF2A0 /* Pods-HLTrafficLightsIndicatorView_Tests-resources.sh */,
+				03D7D70E8F0FE161D572223CE8BE0F25 /* Pods-HLTrafficLightsIndicatorView_Tests-umbrella.h */,
+				2E86E93A141BD2A22880A0E6A2A9AC9B /* Pods-HLTrafficLightsIndicatorView_Tests.debug.xcconfig */,
+				69B4A3CFAD75465A1822B4FFA1EE5CFF /* Pods-HLTrafficLightsIndicatorView_Tests.release.xcconfig */,
+			);
+			name = "Pods-HLTrafficLightsIndicatorView_Tests";
+			path = "Target Support Files/Pods-HLTrafficLightsIndicatorView_Tests";
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				1186193E67D0D6F7EB27C3C909EBC9F5 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				EEEE9A53D5C9AB199366A93807AB844F /* Products */,
+				BC796A70F51A1E18DFC07F0D228AC5C8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC796A70F51A1E18DFC07F0D228AC5C8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D61241BF90219F8F4C310BA40B2F6420 /* Pods-HLTrafficLightsIndicatorView_Example */,
+				160BEFE378CABE1F8916398C603BEECB /* Pods-HLTrafficLightsIndicatorView_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CDF203933AE828388B6F30A274B5CE6A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB8BCEB6401F7AE3CB7CA51DB88B9683 /* HLTrafficLightsIndicatorView.modulemap */,
+				EE6509F683664DECD546BEBC7CB067AE /* HLTrafficLightsIndicatorView.xcconfig */,
+				7C309AF0BC4D458E98A19D615DD9570D /* HLTrafficLightsIndicatorView-dummy.m */,
+				27847548C2855965CEE3B476869B9500 /* HLTrafficLightsIndicatorView-prefix.pch */,
+				BC75A535BBF3C0CE0157ABB444B218C6 /* HLTrafficLightsIndicatorView-umbrella.h */,
+				25F0E4DB7FF6C52170690EC2EFD14D34 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HLTrafficLightsIndicatorView";
+			sourceTree = "<group>";
+		};
+		D61241BF90219F8F4C310BA40B2F6420 /* Pods-HLTrafficLightsIndicatorView_Example */ = {
+			isa = PBXGroup;
+			children = (
+				0C3401111EC61548B5BE61602D0A4F54 /* Info.plist */,
+				F5A5BC4B3581E291C6D05F2CE6D8CC34 /* Pods-HLTrafficLightsIndicatorView_Example.modulemap */,
+				D2CCB7D40011EA2892ABE7453CFF8FA7 /* Pods-HLTrafficLightsIndicatorView_Example-acknowledgements.markdown */,
+				DB21B066B4B29E8DC7FA5FE440B6B212 /* Pods-HLTrafficLightsIndicatorView_Example-acknowledgements.plist */,
+				19483E3B826256AD10A3F82184877537 /* Pods-HLTrafficLightsIndicatorView_Example-dummy.m */,
+				D58BC45E7C46D73B5B272B3F05DBECEB /* Pods-HLTrafficLightsIndicatorView_Example-frameworks.sh */,
+				D99B81BA21F9AB6365E75B82BB38B44E /* Pods-HLTrafficLightsIndicatorView_Example-resources.sh */,
+				FE9743820B547D00C4A853BD36E9787C /* Pods-HLTrafficLightsIndicatorView_Example-umbrella.h */,
+				B962DB8FBDC19B8789695D191757F70E /* Pods-HLTrafficLightsIndicatorView_Example.debug.xcconfig */,
+				B55C1137F4358A2E12B8EAE065E93378 /* Pods-HLTrafficLightsIndicatorView_Example.release.xcconfig */,
+			);
+			name = "Pods-HLTrafficLightsIndicatorView_Example";
+			path = "Target Support Files/Pods-HLTrafficLightsIndicatorView_Example";
+			sourceTree = "<group>";
+		};
+		EEEE9A53D5C9AB199366A93807AB844F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58294B85DDA3431B48B42E6172DCA2CF /* HLTrafficLightsIndicatorView.framework */,
+				DF87FA122DAA751732CB403110ECC2C5 /* Pods_HLTrafficLightsIndicatorView_Example.framework */,
+				CBAD53C6755573D230AAF04BF1E6BD28 /* Pods_HLTrafficLightsIndicatorView_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		20D413681BE53D542CAC376A11ACE43A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6A6DF06FC458ED145522498D6679E2B /* HLTrafficLightsIndicatorView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C39607B49AF568D5904C1B48B2831ECC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B831D4491FB37F99DB98E3FE3EF0C9 /* Pods-HLTrafficLightsIndicatorView_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5D8C4C66B8BF9F067F50434F2AE9906 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA38A6D27660E9608511CF1965591648 /* Pods-HLTrafficLightsIndicatorView_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2240AFA5D1745C3F2B8A7AA0488792E0 /* HLTrafficLightsIndicatorView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02C5B56CBB48612F3ABB77AD7A370838 /* Build configuration list for PBXNativeTarget "HLTrafficLightsIndicatorView" */;
+			buildPhases = (
+				20D413681BE53D542CAC376A11ACE43A /* Headers */,
+				1DE0CE3028BF98515D4D9DCA09C563EF /* Sources */,
+				7E411F91D806B9F73CC9BAD049D0B7EB /* Frameworks */,
+				94CBF794BD88A4655F40F73060F410AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HLTrafficLightsIndicatorView;
+			productName = HLTrafficLightsIndicatorView;
+			productReference = 58294B85DDA3431B48B42E6172DCA2CF /* HLTrafficLightsIndicatorView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		51FC2A50CA538F50DAAB71FD45C84915 /* Pods-HLTrafficLightsIndicatorView_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 843F58CDA065FBC3B4647F08ACCF8C44 /* Build configuration list for PBXNativeTarget "Pods-HLTrafficLightsIndicatorView_Example" */;
+			buildPhases = (
+				C39607B49AF568D5904C1B48B2831ECC /* Headers */,
+				441C0AF47DBE65D739324586D96CCA95 /* Sources */,
+				6B0D104ED80376633C0B3F3FF81FF91B /* Frameworks */,
+				41F0F24F89946E107EAA7C7885DF49F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA5A95712BF7A7406CBABF2F1068C215 /* PBXTargetDependency */,
+			);
+			name = "Pods-HLTrafficLightsIndicatorView_Example";
+			productName = "Pods-HLTrafficLightsIndicatorView_Example";
+			productReference = DF87FA122DAA751732CB403110ECC2C5 /* Pods_HLTrafficLightsIndicatorView_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C606ADABCC0C716D5AB28D228E889E6C /* Pods-HLTrafficLightsIndicatorView_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2380FE777FF6F2C0D097C8ACEEDA7EEA /* Build configuration list for PBXNativeTarget "Pods-HLTrafficLightsIndicatorView_Tests" */;
+			buildPhases = (
+				E5D8C4C66B8BF9F067F50434F2AE9906 /* Headers */,
+				5D8B0EC014F0A5E5FADDA241A3EE5CFB /* Sources */,
+				FCABDEA8423885689B87727D7EF19AC3 /* Frameworks */,
+				5B4087C6F627C3FB8B60D0BCDFAB000D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				823E226C2CFB59368C8C0993C3C50883 /* PBXTargetDependency */,
+			);
+			name = "Pods-HLTrafficLightsIndicatorView_Tests";
+			productName = "Pods-HLTrafficLightsIndicatorView_Tests";
+			productReference = CBAD53C6755573D230AAF04BF1E6BD28 /* Pods_HLTrafficLightsIndicatorView_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = EEEE9A53D5C9AB199366A93807AB844F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2240AFA5D1745C3F2B8A7AA0488792E0 /* HLTrafficLightsIndicatorView */,
+				51FC2A50CA538F50DAAB71FD45C84915 /* Pods-HLTrafficLightsIndicatorView_Example */,
+				C606ADABCC0C716D5AB28D228E889E6C /* Pods-HLTrafficLightsIndicatorView_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41F0F24F89946E107EAA7C7885DF49F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B4087C6F627C3FB8B60D0BCDFAB000D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94CBF794BD88A4655F40F73060F410AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DE0CE3028BF98515D4D9DCA09C563EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2EEAB0144873F1C2F29F3D6F836FE9B /* HLTrafficLightsIndicatorView-dummy.m in Sources */,
+				B67757BEC97BB2DD8A82380F3ACAB24A /* HLTrafficLightsIndicatorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		441C0AF47DBE65D739324586D96CCA95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E74A8D281604E6C003FD873507EEDFB7 /* Pods-HLTrafficLightsIndicatorView_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D8B0EC014F0A5E5FADDA241A3EE5CFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E04F7843503F1553A5C6A35826FF6D4 /* Pods-HLTrafficLightsIndicatorView_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		823E226C2CFB59368C8C0993C3C50883 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-HLTrafficLightsIndicatorView_Example";
+			target = 51FC2A50CA538F50DAAB71FD45C84915 /* Pods-HLTrafficLightsIndicatorView_Example */;
+			targetProxy = 7F9E3050A1A7721D222B0EE4D654FDD8 /* PBXContainerItemProxy */;
+		};
+		EA5A95712BF7A7406CBABF2F1068C215 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HLTrafficLightsIndicatorView;
+			target = 2240AFA5D1745C3F2B8A7AA0488792E0 /* HLTrafficLightsIndicatorView */;
+			targetProxy = D6C5E24B8F86AE1AD2CC5405734128FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A3D44139DCE323B1268A68FB23A5E9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B55C1137F4358A2E12B8EAE065E93378 /* Pods-HLTrafficLightsIndicatorView_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HLTrafficLightsIndicatorView_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HLTrafficLightsIndicatorView_Example/Pods-HLTrafficLightsIndicatorView_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4354305066195A05DC15409088C71433 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B962DB8FBDC19B8789695D191757F70E /* Pods-HLTrafficLightsIndicatorView_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HLTrafficLightsIndicatorView_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HLTrafficLightsIndicatorView_Example/Pods-HLTrafficLightsIndicatorView_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		515F7A54FEE6FF4A39289EE545F3B7B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE6509F683664DECD546BEBC7CB067AE /* HLTrafficLightsIndicatorView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HLTrafficLightsIndicatorView/HLTrafficLightsIndicatorView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HLTrafficLightsIndicatorView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HLTrafficLightsIndicatorView/HLTrafficLightsIndicatorView.modulemap";
+				PRODUCT_MODULE_NAME = HLTrafficLightsIndicatorView;
+				PRODUCT_NAME = HLTrafficLightsIndicatorView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6547C67554C4F60145B91015C18615F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE6509F683664DECD546BEBC7CB067AE /* HLTrafficLightsIndicatorView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HLTrafficLightsIndicatorView/HLTrafficLightsIndicatorView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HLTrafficLightsIndicatorView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HLTrafficLightsIndicatorView/HLTrafficLightsIndicatorView.modulemap";
+				PRODUCT_MODULE_NAME = HLTrafficLightsIndicatorView;
+				PRODUCT_NAME = HLTrafficLightsIndicatorView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		73ABC2D18F03827B7773405E7F2AD926 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		75F0F39C465670DF9E2F8559010E0B84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E86E93A141BD2A22880A0E6A2A9AC9B /* Pods-HLTrafficLightsIndicatorView_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HLTrafficLightsIndicatorView_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HLTrafficLightsIndicatorView_Tests/Pods-HLTrafficLightsIndicatorView_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9B6B989AABD96BB9DECB1784EA5E2534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		AADE05FA6B97C71723E17E320AC82164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69B4A3CFAD75465A1822B4FFA1EE5CFF /* Pods-HLTrafficLightsIndicatorView_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HLTrafficLightsIndicatorView_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HLTrafficLightsIndicatorView_Tests/Pods-HLTrafficLightsIndicatorView_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02C5B56CBB48612F3ABB77AD7A370838 /* Build configuration list for PBXNativeTarget "HLTrafficLightsIndicatorView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6547C67554C4F60145B91015C18615F6 /* Debug */,
+				515F7A54FEE6FF4A39289EE545F3B7B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2380FE777FF6F2C0D097C8ACEEDA7EEA /* Build configuration list for PBXNativeTarget "Pods-HLTrafficLightsIndicatorView_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75F0F39C465670DF9E2F8559010E0B84 /* Debug */,
+				AADE05FA6B97C71723E17E320AC82164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73ABC2D18F03827B7773405E7F2AD926 /* Debug */,
+				9B6B989AABD96BB9DECB1784EA5E2534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		843F58CDA065FBC3B4647F08ACCF8C44 /* Build configuration list for PBXNativeTarget "Pods-HLTrafficLightsIndicatorView_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4354305066195A05DC15409088C71433 /* Debug */,
+				1A3D44139DCE323B1268A68FB23A5E9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

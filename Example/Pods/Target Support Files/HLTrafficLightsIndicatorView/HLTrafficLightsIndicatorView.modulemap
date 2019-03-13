@@ -1,0 +1,6 @@
+framework module HLTrafficLightsIndicatorView {
+  umbrella header "HLTrafficLightsIndicatorView-umbrella.h"
+
+  export *
+  module * { export * }
+}
